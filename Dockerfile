@@ -40,7 +40,10 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
     (/usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 "$LANG" || true) && \
     echo "export LANG=$LANG" > /etc/profile.d/locale.sh && \
     \
-    # apk del glibc-i18n && \
+    # FOR java program
+    apk add --no-cache fontconfig  ttf-dejavu && \
+    rm -rf /var/cache/apk/* && \
+    apk del glibc-i18n && \
     \
     rm "/root/.wget-hsts" && \
     apk del .build-dependencies && \
