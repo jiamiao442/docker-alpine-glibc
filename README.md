@@ -19,6 +19,23 @@ Download size of this image is only:
 
 [![](https://images.microbadger.com/badges/image/frolvlad/alpine-glibc.svg)](http://microbadger.com/images/frolvlad/alpine-glibc "Get your own image badge on microbadger.com")
 
+# TIMEZONE
+
+ENV TIMEZONE=Asia/Shanghai
+
+
+# 字符集变量
+ENV LANG='zh_CN.UTF-8' LANGUAGE='zh_CN:zh' LC_ALL='zh_CN.UTF-8'
+
+
+
+
+# 为java程序添加字体包 fontconfig  ttf-dejavu
+ ```
+ # fontconfig and ttf-dejavu added to support serverside image generation by Java programs
+    apk add --no-cache fontconfig  ttf-dejavu && \
+    rm -rf /var/cache/apk/*
+```
 
 Usage Example
 -------------
