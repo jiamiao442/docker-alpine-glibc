@@ -40,7 +40,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
     #(/usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 "$LANG" || true) && \
     gunzip /usr/glibc-compat/share/i18n/charmaps/UTF-8.gz  && \
     ldconfig /lib /usr/glibc-compat/lib && \
-    /usr/glibc-compat/bin/localedef -i zh_CN -f UTF-8 zh_CN.UTF-8 && \
+    /usr/glibc-compat/bin/localedef -i zh_CN -f UTF-8 "$LANG" && \
     echo "export LANG=$LANG" > /etc/profile.d/locale.sh && \
     \
     # FOR java program
