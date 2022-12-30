@@ -43,7 +43,7 @@ Usage Example
 This image is intended to be a base image for your projects, so you may use it like this:
 
 ```Dockerfile
-FROM frolvlad/alpine-glibc
+FROM jiamiao442/alpine-glibc
 
 COPY ./my_app /usr/local/bin/my_app
 ```
