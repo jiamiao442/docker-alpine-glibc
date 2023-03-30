@@ -1,4 +1,4 @@
-FROM alpine:3.17
+FROM alpine:3.16
 
 # 字符集变量
 ENV LANG='zh_CN.UTF-8' LANGUAGE='zh_CN:zh' LC_ALL='zh_CN.UTF-8'
