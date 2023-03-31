@@ -44,7 +44,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
     echo "export LANG=$LANG" > /etc/profile.d/locale.sh && \
     \
     # FOR java program
-    apk add --no-cache fontconfig  ttf-dejavu && \
+    apk add --no-cache fontconfig  ttf-dejavu tomcat-native && \
     rm -rf /var/cache/apk/* && \
     apk del glibc-i18n && \
     \
