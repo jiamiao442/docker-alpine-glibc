@@ -38,7 +38,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
     mv /etc/nsswitch.conf.bak /etc/nsswitch.conf && \
     rm "/etc/apk/keys/sgerrand.rsa.pub" && \
     #(/usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 "$LANG" || true) && \
-    gunzip --keep /usr/glibc-compat/share/i18n/charmaps/UTF-8.gz  && \
+    gunzip  /usr/glibc-compat/share/i18n/charmaps/UTF-8.gz  && \
     ldconfig /lib /usr/glibc-compat/lib && \
     /usr/glibc-compat/bin/localedef -i zh_CN -f UTF-8 "$LANG" && \
     echo "export LANG=$LANG" > /etc/profile.d/locale.sh && \
